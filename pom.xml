@@ -4,7 +4,7 @@
   <groupId>com.my.applications</groupId>
   <artifactId>NEW</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.1</version>
   <name>NEW</name>
   <url>http://maven.apache.org</url>
   <dependencies>
@@ -15,4 +15,18 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <distributionManagement>
+        <repository>
+            <id>my_repo</id>
+            <name>Oldone</name>
+            <url>http://192.168.1.217:8081/nexus/content/repositories/releases/</url>
+            <layout>default</layout>
+        </repository>
+        <snapshotRepository>
+            <id>my_repo</id>
+            <name>Newone</name>
+            <url>http://192.168.1.217:8081/nexus/content/repositories/new/</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>
 </project>
